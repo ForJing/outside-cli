@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ForJing/outside-cli#readme",
   "dependencies": {
     "chalk": "^2.4.2",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "ora": "^3.4.0"
   }
 }

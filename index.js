@@ -1,8 +1,14 @@
 const minimist = require("minimist");
 const chalk = require("chalk");
+const ora = require("ora");
 
 module.exports = () => {
   const args = minimist(process.argv.slice(2));
+  const spinner = ora().start();
+
+  setTimeout(() => {
+    spinner.stop();
+  }, 3000);
 
   let cmd = args._[0] || "help";
 
@@ -11,6 +17,7 @@ module.exports = () => {
   }
 
   if (args.help || args.h) {
+    cmd = "help";
   }
 
   switch (cmd) {

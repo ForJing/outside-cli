@@ -15,6 +15,8 @@ const menus = {
 };
 
 module.exports = args => {
+  console.log("help arg", args);
   const subCmd = args._[0] === "help" ? args._[1] : args._[0];
+  console.log("subCmd", subCmd);
   console.log(menus[subCmd] || menus.main);
 };
